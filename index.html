@@ -41,7 +41,7 @@
     <h3 class="h5 mb-3 font-weight-normal"><p style="color:red"><b> Darren & Mammie Love You </b></p></h3>
     <h1 class="h3 mb-3 font-weight-normal">但你知道解開訊息的鑰匙嗎？</h1>
     <h1 class="h3 mb-3 font-weight-normal">如果知道答案</h1>
-    <h1 class="h3 mb-3 font-weight-normal">就來告訴我吧</h1>
+    <h1 class="h3 mb-3 font-weight-normal">就寫在答案紙告訴我吧</h1>
     
     <label for="key" class="sr-only">密鑰</label>
     <input type="text" id="key" class="form-control" placeholder="密鑰" required autofocus>
@@ -59,6 +59,12 @@
 
   <script>
     function decode() {
+        const msgs = [
+          "我阿嬤都比你厲害，要來根SNICKERS嗎？",
+          "不要鬧了，你確定你會？",
+          "加油！不要放棄喔"
+        ]
+
         var key =  document.getElementById("key").value
         var encrypted = [163, 68, 98, 82, 81, 101, 109, 160, 165, 160, 78, 97, 110, 109, 106, 101, 163, 76, 108, 86, 102, 160, 58, 111, 86, 160]
 
@@ -69,9 +75,9 @@
         // document.getElementById("output").value = output;
         
         if (output == " Darren & Mammie Love You ") {
-          document.getElementById("msg").innerHTML = "恭喜你答對了！";
+          document.getElementById("msg").innerHTML = "恭喜你答對了！給你100分";
         } else {
-          document.getElementById("msg").innerHTML = "不要鬧了，你確定你會？";
+          document.getElementById("msg").innerHTML = msgs[Math.floor(Math.random() * msgs.length)];
         }
     }
   </script>
