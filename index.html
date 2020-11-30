@@ -40,11 +40,9 @@
     <h1 class="h3 mb-3 font-weight-normal">寶藏的訊息</h1>
     <h3 class="h5 mb-3 font-weight-normal"><p style="color:red"><b> Darren & Mammie Love You </b></p></h3>
     <h1 class="h3 mb-3 font-weight-normal">但你知道解開訊息的鑰匙嗎？</h1>
-    <h1 class="h3 mb-3 font-weight-normal">如果知道答案</h1>
-    <h1 class="h3 mb-3 font-weight-normal">就寫在答案紙告訴我吧</h1>
     
     <label for="key" class="sr-only">密鑰</label>
-    <input type="text" id="key" class="form-control" placeholder="密鑰" required autofocus>
+    <input type="text" id="key" class="form-control" placeholder="請輸入密鑰" required autofocus>
 
     
     <div class="checkbox mb-3"></div>
@@ -75,7 +73,7 @@
         // document.getElementById("output").value = output;
         
         if (output == " Darren & Mammie Love You ") {
-          document.getElementById("msg").innerHTML = "恭喜你答對了！給你100分";
+          document.getElementById("msg").innerHTML = "恭喜你答對了！給你100分<br>記得把答案寫在答案紙上喔";
         } else {
           document.getElementById("msg").innerHTML = msgs[Math.floor(Math.random() * msgs.length)];
         }
